@@ -123,8 +123,9 @@ void main(){
             if(!(!usuariosCadastrados)){
                 printf("\n----------------------------------");
                 printf("\n\nDigite o CPF do usuario que deseja EDITAR: ");
-                gets(cpfUsuario);
+                fflush(stdin);
                 while (getchar() != '\n');
+                gets(cpfUsuario);
                 editarUsuario(usuarios, cpfUsuario);
             }
                 getchar();
@@ -134,7 +135,8 @@ void main(){
                 if(!(!usuariosCadastrados)){
                     printf("\n----------------------------------");
                     printf("\n\nDigite o CPF que deseja EXCLUIR: ");
-		            while (getchar() != '\n');
+                    fflush(stdin);
+		    while (getchar() != '\n');
                     gets(cpfUsuario);
 		            excluirUsuario(usuarios, cpfUsuario);
                 }
